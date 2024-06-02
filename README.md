@@ -10,7 +10,7 @@ This ToC visualization is applied only to @media print (visible in PDFs, not in 
 
 ## Approach
 
-The approach is to make a special CSS document (which need to be included in the HTML document) and to use specific classes in the HTML document.
+The approach is to make a special [CSS document](toc.css) (which need to be included in the HTML document) and to use specific classes in the HTML document.
 
 The structure of the HTML should contain two parts:
 
@@ -26,9 +26,9 @@ This is a div which contains all ToC elements.
 Each entry in the ToC div have the following structure:
 
     <div class='toc_container'>
-	<div class="toc_left-column"><a href="#intro">1. Introduction</a></div>
-	<div class="toc_middle-column"></div>
-	<div class="toc_right-column"><a href="#intro"></a> </div>
+        <div class="toc_left-column"><a href="#intro">1. Introduction</a></div>
+        <div class="toc_middle-column"></div>
+        <div class="toc_right-column"><a href="#intro"></a> </div>
     </div>
 
 All three parts within the 'toc_container' class are required:
@@ -39,6 +39,8 @@ All three parts within the 'toc_container' class are required:
  
 Note that the 'href' (which is '#intro' in the example above) needs to be referring to a real ID which is used in the main document content section (ref. below). 
 
+Note also that the section/subsection level needs to be manually specified in the toc_container div, as an additional class toc_level2 or toc_level3 
+(three levels are supported but more can be easily added if needed).
 
 ## The document sections 
 
@@ -46,8 +48,8 @@ Next, the sections of the document are included. The only requirement here is to
 Example:
 
     <section id="intro">
-    <h2>1. Introduction</h2>
-    <div> CONTENT </div>
+        <h2>1. Introduction</h2>
+        <div> SECTION CONTENT </div>
     </section>
 
 # Examples 
