@@ -1,0 +1,31 @@
+.toc_container {
+    display: flex; 
+}
+.toc_level2 {
+    margin-left: 10px;
+}
+.toc_level3 {
+    margin-left: 20px;
+}
+.toc_left-column, .toc_right-column {
+    flex-shrink: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.toc_middle-column {
+    flex-grow: 1;
+} 
+
+@media print {
+   a {
+         color: inherit;        /* Use the same color as the rest of the document (e.g. black font) */
+         text-decoration: none; /* Do not underline the font in the media print */
+   }
+   .toc_middle-column {
+       flex-grow: 1;
+       transform: translateY(-4px);    /* Elevate the dots a little bit */
+       border-bottom: 1px dotted #000; /* Show the dots between the section name and the page number (only in media print) */
+   } 
+   .toc_right-column a::after { content: target-counter(attr(href), page); } /* Display the page number in ToC - only in media print */
+   section { page-break-inside: avoid; } 
+}
