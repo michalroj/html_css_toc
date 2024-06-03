@@ -1,6 +1,16 @@
-# Table of Contents (ToC) in print layout generated with raw CSS and HTML  
+# Table of Contents (ToC) in raw CSS and HTML (print layout)
 
-In general, generating a Table of Contents (ToC) in HTML is not a straightforward task; however, it is not very hard either. The problem arises when you want to generate a print layout with ToCs referring to page numbers and, additionally, create a table of contents element where the titles referred to in the ToCs are nicely connected with dots (....) leading to the page numbers.
+This project gives an instruction how to achive the following effect with HTML/CSS in print layout (@media print):
+
+![One ToC entry](toc-one-entry-example.png)
+
+In a verbal form: each table of contents entry contains a dotted space where the contents' section is linked with the page number.
+ 
+## Introduction
+
+In general, generating a Table of Contents (ToC) in HTML is not a straightforward task; however, it is not very hard either. 
+
+The problem arises when you want to generate a print layout with ToCs referring to page numbers and, additionally, create a table of contents element where the titles referred to in the ToCs are nicely connected with dots (....) leading to the page numbers.
 
 Since this is quite a challenging task, I decided to describe my own method of creating such ToCs with an example and accompanying HTML/CSS code. This method is far from being very simple (I propose to use this document as a 'framework' for the automatic generation of such documents). The result looks good.
 
@@ -14,14 +24,14 @@ The approach is to make a special [CSS document](toc.css) (which need to be incl
 
 The structure of the HTML should contain two parts:
 
-## The ToC itself.
+### The ToC itself.
 This is a div which contains all ToC elements.
  
     <div class="toc">
       HERE GO ToC ENTRIES
     </div>
 
-### Elements within the ToC div
+#### Elements within the ToC div
 
 Each entry in the ToC div have the following structure:
 
@@ -42,7 +52,7 @@ Note that the 'href' (which is '#intro' in the example above) needs to be referr
 Note also that the section/subsection level needs to be manually specified in the toc_container div, as an additional class toc_level2 or toc_level3 
 (three levels are supported but more can be easily added if needed).
 
-## The document sections 
+### The document's sections 
 
 Next, the sections of the document are included. The only requirement here is to use the ID which are referred to in the 'toc' div entries.
 Example:
@@ -54,6 +64,6 @@ Example:
 
 # Examples 
 
-The example article using this approach is [example.html](example.html).
+An example article using this approach is [example.html](example.html).
 
 The generated PDF is [example.pdf](example.pdf).
