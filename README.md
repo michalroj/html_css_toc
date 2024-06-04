@@ -1,10 +1,14 @@
 # Table of Contents (ToC) in raw CSS and HTML (print layout)
 
-This project gives an instruction how to achive the following effect with HTML/CSS in print layout (@media print):
+This project provides instructions on how to achieve the following effect with HTML/CSS in a print layout (@media print):
+
+---
 
 ![One ToC entry](toc-one-entry-example.png)
 
-In a verbal form: each table of contents entry contains a dotted space where the contents' section is linked with the page number.
+---
+
+In verbal form: each table of contents entry contains a dotted line connecting the section title to its corresponding page number.
  
 ## Introduction
 
