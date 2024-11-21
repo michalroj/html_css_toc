@@ -18,7 +18,7 @@ The problem arises when you want to generate a print layout with ToCs referring 
 
 Since this is quite a challenging task, I decided to describe my own method of creating such ToCs with an example and accompanying HTML/CSS code. This method is far from being very simple (I propose to use this document as a 'framework' for the automatic generation of such documents). The result looks good.
 
-This approach has been tested with the <b>weasyprint</b> tool for generating PDFs from HTML.
+This approach has been tested with the [weasyprint](https://github.com/Kozea/WeasyPrint) tool for generating PDFs from HTML.
 
 This ToC visualization is applied only to @media print (visible in PDFs, not in HTML).
 
